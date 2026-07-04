@@ -1,0 +1,31 @@
+# Build artifacts
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.eclipse
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+
+# Maven
+.m2/
+*.pom
+
+# Environment
+.env
+.env.local
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
