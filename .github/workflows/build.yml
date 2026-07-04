@@ -5,10 +5,14 @@ on:
     branches:
       - main
       - develop
+
   pull_request:
     branches:
       - main
       - develop
+
+  # Allows manual execution from the GitHub Actions UI
+  workflow_dispatch:
 
 jobs:
   build:
@@ -26,10 +30,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean install
-
-      - name: Run Tests
-        run: mvn test
+        run: mvn clean verify
 
       - name: Upload Build Artifacts
         if: always()
