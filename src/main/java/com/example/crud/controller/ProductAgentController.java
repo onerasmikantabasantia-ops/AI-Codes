@@ -127,4 +127,10 @@ public class ProductAgentController {
     public ResponseEntity<List<ChatRequest>> history() {
         return ResponseEntity.ok(memory.getHistory());
     }
+
+    @DeleteMapping("/history")
+    public ResponseEntity<String> clearHistory() {
+        memory.clear();
+        return ResponseEntity.ok("Chat history cleared");
+    }
 }
